@@ -32,4 +32,16 @@ server.get("/jogos", (request, reply) => {
     reply.send(resposta)
 })
 
+server.get("/jogos/:titulo", (request, reply) => {
+    const { titulo } = request.params
+    const { atributo } = request.query
+    let resposta = {
+        titulo,
+    }
+    const jogo = games.games.find(g => g.titulo == titulo)
+    resposta[atributo] = jogo[atributo]
+
+    reply.send(resposta)
+})
+
 server.listen({ port: 3000 })

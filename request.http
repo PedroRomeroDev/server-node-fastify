@@ -10,3 +10,8 @@ GET http://localhost:3000/jogos?dataLancamento=2000&dataMaior=true
 
 # Rota Para Buscar Determinado Jogo Pelo Titulo
 GET http://localhost:3000/jogos?titulo=Valorant
+
+###
+
+# Rota Para Buscar Determinado Atributo de um Jogo
+GET http://localhost:3000/jogos/Valorant?atributo=genero
