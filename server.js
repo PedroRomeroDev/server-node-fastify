@@ -1,7 +1,12 @@
 import fastify from 'fastify'
+import cors from "@fastify/cors"
 import games from "./games.json" with {type: 'json'}
 
 const server = fastify()
+
+await server.register(cors, {
+    origin: "http://127.0.0.1:5500"
+})
 
 server.get("/jogos", (request, reply) => {
     let resposta
@@ -29,6 +34,10 @@ server.get("/jogos", (request, reply) => {
         resposta = games.games.map(g => g.titulo)
     }
 
+    if (!resposta){
+        return reply.status(404).send({mensagem: "Nada Encontrado, Verifique o EndPoint da API"})
+    }
+    
     reply.send(resposta)
 })
 

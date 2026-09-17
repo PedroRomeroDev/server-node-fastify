@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endpint API Testes</title>
+</head>
+<body>
+    <input id="inputAPI" type="text" placeholder="fetch API">
+    <button onclick="fetchAPI()">AQUI!!!</button>
+    <p id="resposta"></p>
+
+<script>
+    async function fetchAPI () {
+        document.getElementById("resposta").innerHTML = ""
+        const resposta = await fetch(document.getElementById("inputAPI").value)
+        const dados = await resposta.json()
+        console.log(dados)
+        if (Array.isArray(dados)) {
+            dados.map(game => {
+            document.getElementById("resposta").innerHTML += "<p>" + game + "</p>"
+            })
+        } else {
+            document.getElementById("resposta").innerHTML += "<p>" + dados.titulo + "</p>"
+        }
+        
+    }
+</script>
+</body>
+</html>
