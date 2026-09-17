@@ -5,9 +5,15 @@ const server = fastify()
 
 server.get("/jogos", (request, reply) => {
     let resposta
-    const { dataMaior, dataLancamento } = request.query
+    const { dataMaior, dataLancamento, titulo } = request.query
 
-        if (dataMaior == "true"){
+        if(titulo){
+            resposta = games.games
+            .filter(g => g.titulo == titulo)
+            .map(g => g)
+        }
+        else if (dataMaior == "true"){
+            // Buscar Datas de Lancamento
             resposta = games.games
             .filter(g => g.ano_lancamento > Number(dataLancamento))
             .map(g => g.titulo)
@@ -20,9 +26,8 @@ server.get("/jogos", (request, reply) => {
             .filter(g => g.ano_lancamento == Number(dataLancamento))
             .map(g => g.titulo)
         } else {
-            resposta = games.games
-            .map(g => g.titulo)
-        }
+        resposta = games.games.map(g => g.titulo)
+    }
 
     reply.send(resposta)
 })

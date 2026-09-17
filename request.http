@@ -4,4 +4,9 @@ GET http://localhost:3000/jogos?dataLancamento=2000
 ###
 
 # Rota Data Lancamento Maior ou Menor
-GET http://localhost:3000/jogos?data=2000&dataMaior=false
+GET http://localhost:3000/jogos?dataLancamento=2000&dataMaior=true
+
+###
+
+# Rota Para Buscar Determinado Jogo Pelo Titulo
+GET http://localhost:3000/jogos?titulo=Valorant
