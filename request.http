@@ -1,0 +1,7 @@
+# Rota Data Lancamento
+GET http://localhost:3000/jogos?dataLancamento=2000
+
+###
+
+# Rota Data Lancamento Maior ou Menor
+GET http://localhost:3000/jogos?data=2000&dataMaior=false

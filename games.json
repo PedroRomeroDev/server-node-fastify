@@ -1,0 +1,354 @@
+{
+  "games": [
+    {
+      "titulo": "The Witcher 3: Wild Hunt",
+      "preco": "R$ 39,99",
+      "plataforma": "Steam/GOG/Epic Games",
+      "ano_lancamento": 2015,
+      "faixa_etaria": "18+",
+      "genero": "RPG de Ação",
+      "desenvolvedora": "CD Projekt Red",
+      "multiplayer": false
+    },
+    {
+      "titulo": "Counter-Strike 2",
+      "preco": "Gratuito",
+      "plataforma": "Steam",
+      "ano_lancamento": 2023,
+      "faixa_etaria": "16+",
+      "genero": "FPS Tático",
+      "desenvolvedora": "Valve",
+      "multiplayer": true
+    },
+    {
+      "titulo": "Dota 2",
+      "preco": "Gratuito",
+      "plataforma": "Steam",
+      "ano_lancamento": 2013,
+      "faixa_etaria": "12+",
+      "genero": "MOBA",
+      "desenvolvedora": "Valve",
+      "multiplayer": true
+    },
+    {
+      "titulo": "Grand Theft Auto V",
+      "preco": "R$ 49,99",
+      "plataforma": "Steam/Epic Games",
+      "ano_lancamento": 2015,
+      "faixa_etaria": "18+",
+      "genero": "Ação/Aventura",
+      "desenvolvedora": "Rockstar Games",
+      "multiplayer": true
+    },
+    {
+      "titulo": "Red Dead Redemption 2",
+      "preco": "R$ 99,90",
+      "plataforma": "Steam/Epic Games",
+      "ano_lancamento": 2019,
+      "faixa_etaria": "18+",
+      "genero": "Ação/Aventura",
+      "desenvolvedora": "Rockstar Games",
+      "multiplayer": true
+    },
+    {
+      "titulo": "Fortnite",
+      "preco": "Gratuito",
+      "plataforma": "Epic Games",
+      "ano_lancamento": 2017,
+      "faixa_etaria": "12+",
+      "genero": "Battle Royale",
+      "desenvolvedora": "Epic Games",
+      "multiplayer": true
+    },
+    {
+      "titulo": "Minecraft",
+      "preco": "R$ 33,25",
+      "plataforma": "Standalone (launcher próprio)",
+      "ano_lancamento": 2011,
+      "faixa_etaria": "Livre",
+      "genero": "Sandbox/Sobrevivência",
+      "desenvolvedora": "Mojang Studios",
+      "multiplayer": true
+    },
+    {
+      "titulo": "League of Legends",
+      "preco": "Gratuito",
+      "plataforma": "Standalone (Riot Client)",
+      "ano_lancamento": 2009,
+      "faixa_etaria": "12+",
+      "genero": "MOBA",
+      "desenvolvedora": "Riot Games",
+      "multiplayer": true
+    },
+    {
+      "titulo": "Valorant",
+      "preco": "Gratuito",
+      "plataforma": "Standalone (Riot Client)",
+      "ano_lancamento": 2020,
+      "faixa_etaria": "16+",
+      "genero": "FPS Tático",
+      "desenvolvedora": "Riot Games",
+      "multiplayer": true
+    },
+    {
+      "titulo": "Elden Ring",
+      "preco": "R$ 249,90",
+      "plataforma": "Steam",
+      "ano_lancamento": 2022,
+      "faixa_etaria": "16+",
+      "genero": "RPG de Ação/Souls-like",
+      "desenvolvedora": "FromSoftware",
+      "multiplayer": true
+    },
+    {
+      "titulo": "Cyberpunk 2077",
+      "preco": "R$ 99,90",
+      "plataforma": "Steam/GOG/Epic Games",
+      "ano_lancamento": 2020,
+      "faixa_etaria": "18+",
+      "genero": "RPG de Ação",
+      "desenvolvedora": "CD Projekt Red",
+      "multiplayer": false
+    },
+    {
+      "titulo": "Baldur's Gate 3",
+      "preco": "R$ 199,90",
+      "plataforma": "Steam/GOG",
+      "ano_lancamento": 2023,
+      "faixa_etaria": "18+",
+      "genero": "RPG",
+      "desenvolvedora": "Larian Studios",
+      "multiplayer": true
+    },
+    {
+      "titulo": "Apex Legends",
+      "preco": "Gratuito",
+      "plataforma": "Steam/Epic Games/EA App",
+      "ano_lancamento": 2019,
+      "faixa_etaria": "16+",
+      "genero": "Battle Royale",
+      "desenvolvedora": "Respawn Entertainment",
+      "multiplayer": true
+    },
+    {
+      "titulo": "PUBG: Battlegrounds",
+      "preco": "Gratuito",
+      "plataforma": "Steam",
+      "ano_lancamento": 2017,
+      "faixa_etaria": "16+",
+      "genero": "Battle Royale",
+      "desenvolvedora": "Krafton",
+      "multiplayer": true
+    },
+    {
+      "titulo": "Rocket League",
+      "preco": "Gratuito",
+      "plataforma": "Steam/Epic Games",
+      "ano_lancamento": 2015,
+      "faixa_etaria": "Livre",
+      "genero": "Esporte/Arcade",
+      "desenvolvedora": "Psyonix",
+      "multiplayer": true
+    },
+    {
+      "titulo": "Terraria",
+      "preco": "R$ 16,79",
+      "plataforma": "Steam",
+      "ano_lancamento": 2011,
+      "faixa_etaria": "10+",
+      "genero": "Sandbox/Ação",
+      "desenvolvedora": "Re-Logic",
+      "multiplayer": true
+    },
+    {
+      "titulo": "Stardew Valley",
+      "preco": "R$ 19,99",
+      "plataforma": "Steam/GOG",
+      "ano_lancamento": 2016,
+      "faixa_etaria": "Livre",
+      "genero": "Simulação/RPG",
+      "desenvolvedora": "ConcernedApe",
+      "multiplayer": true
+    },
+    {
+      "titulo": "Hades",
+      "preco": "R$ 46,99",
+      "plataforma": "Steam/Epic Games",
+      "ano_lancamento": 2020,
+      "faixa_etaria": "16+",
+      "genero": "Roguelike/Ação",
+      "desenvolvedora": "Supergiant Games",
+      "multiplayer": false
+    },
+    {
+      "titulo": "Among Us",
+      "preco": "R$ 6,29",
+      "plataforma": "Steam/Epic Games",
+      "ano_lancamento": 2018,
+      "faixa_etaria": "Livre",
+      "genero": "Festa/Social Dedução",
+      "desenvolvedora": "InnerSloth",
+      "multiplayer": true
+    },
+    {
+      "titulo": "Sea of Thieves",
+      "preco": "R$ 99,00",
+      "plataforma": "Steam/Epic Games",
+      "ano_lancamento": 2018,
+      "faixa_etaria": "12+",
+      "genero": "Aventura/Ação",
+      "desenvolvedora": "Rare",
+      "multiplayer": true
+    },
+    {
+      "titulo": "Hogwarts Legacy",
+      "preco": "R$ 249,00",
+      "plataforma": "Steam/Epic Games",
+      "ano_lancamento": 2023,
+      "faixa_etaria": "12+",
+      "genero": "RPG de Ação",
+      "desenvolvedora": "Avalanche Software",
+      "multiplayer": false
+    },
+    {
+      "titulo": "God of War",
+      "preco": "R$ 199,90",
+      "plataforma": "Steam/Epic Games",
+      "ano_lancamento": 2022,
+      "faixa_etaria": "18+",
+      "genero": "Ação/Aventura",
+      "desenvolvedora": "Santa Monica Studio",
+      "multiplayer": false
+    },
+    {
+      "titulo": "Half-Life: Alyx",
+      "preco": "R$ 99,99",
+      "plataforma": "Steam",
+      "ano_lancamento": 2020,
+      "faixa_etaria": "16+",
+      "genero": "FPS/Realidade Virtual",
+      "desenvolvedora": "Valve",
+      "multiplayer": false
+    },
+    {
+      "titulo": "DOOM Eternal",
+      "preco": "R$ 79,90",
+      "plataforma": "Steam",
+      "ano_lancamento": 2020,
+      "faixa_etaria": "18+",
+      "genero": "FPS",
+      "desenvolvedora": "id Software",
+      "multiplayer": true
+    },
+    {
+      "titulo": "Sekiro: Shadows Die Twice",
+      "preco": "R$ 149,90",
+      "plataforma": "Steam",
+      "ano_lancamento": 2019,
+      "faixa_etaria": "16+",
+      "genero": "Ação/Souls-like",
+      "desenvolvedora": "FromSoftware",
+      "multiplayer": false
+    },
+    {
+      "titulo": "Civilization VI",
+      "preco": "R$ 99,90",
+      "plataforma": "Steam/Epic Games",
+      "ano_lancamento": 2016,
+      "faixa_etaria": "12+",
+      "genero": "Estratégia por Turnos",
+      "desenvolvedora": "Firaxis Games",
+      "multiplayer": true
+    },
+    {
+      "titulo": "Age of Empires IV",
+      "preco": "R$ 149,00",
+      "plataforma": "Steam",
+      "ano_lancamento": 2021,
+      "faixa_etaria": "12+",
+      "genero": "Estratégia em Tempo Real",
+      "desenvolvedora": "Relic Entertainment",
+      "multiplayer": true
+    },
+    {
+      "titulo": "Dead by Daylight",
+      "preco": "R$ 51,99",
+      "plataforma": "Steam/Epic Games",
+      "ano_lancamento": 2016,
+      "faixa_etaria": "18+",
+      "genero": "Terror/Multiplayer Assimétrico",
+      "desenvolvedora": "Behaviour Interactive",
+      "multiplayer": true
+    },
+    {
+      "titulo": "It Takes Two",
+      "preco": "R$ 89,00",
+      "plataforma": "Steam/Epic Games",
+      "ano_lancamento": 2021,
+      "faixa_etaria": "12+",
+      "genero": "Aventura/Cooperativo",
+      "desenvolvedora": "Hazelight Studios",
+      "multiplayer": true
+    },
+    {
+      "titulo": "Portal 2",
+      "preco": "R$ 20,99",
+      "plataforma": "Steam",
+      "ano_lancamento": 2011,
+      "faixa_etaria": "10+",
+      "genero": "Puzzle/Ação",
+      "desenvolvedora": "Valve",
+      "multiplayer": true
+    },
+    {
+      "titulo": "Left 4 Dead 2",
+      "preco": "R$ 24,99",
+      "plataforma": "Steam",
+      "ano_lancamento": 2009,
+      "faixa_etaria": "18+",
+      "genero": "FPS/Terror",
+      "desenvolvedora": "Valve",
+      "multiplayer": true
+    },
+    {
+      "titulo": "Overwatch 2",
+      "preco": "Gratuito",
+      "plataforma": "Battle.net/Steam",
+      "ano_lancamento": 2022,
+      "faixa_etaria": "12+",
+      "genero": "FPS de Heróis",
+      "desenvolvedora": "Blizzard Entertainment",
+      "multiplayer": true
+    },
+    {
+      "titulo": "Genshin Impact",
+      "preco": "Gratuito",
+      "plataforma": "Standalone (launcher próprio)/Epic Games",
+      "ano_lancamento": 2020,
+      "faixa_etaria": "12+",
+      "genero": "RPG de Ação/Mundo Aberto",
+      "desenvolvedora": "HoYoverse",
+      "multiplayer": true
+    },
+    {
+      "titulo": "Fall Guys",
+      "preco": "Gratuito",
+      "plataforma": "Steam/Epic Games",
+      "ano_lancamento": 2020,
+      "faixa_etaria": "Livre",
+      "genero": "Festa/Battle Royale",
+      "desenvolvedora": "Mediatonic",
+      "multiplayer": true
+    },
+    {
+      "titulo": "Assassin's Creed Valhalla",
+      "preco": "R$ 199,00",
+      "plataforma": "Steam/Epic Games/Ubisoft Connect",
+      "ano_lancamento": 2020,
+      "faixa_etaria": "18+",
+      "genero": "RPG de Ação/Mundo Aberto",
+      "desenvolvedora": "Ubisoft",
+      "multiplayer": false
+    }
+  ]
+}
