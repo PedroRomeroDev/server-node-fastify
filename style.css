@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+body main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100%;
+}
+
+body main form::before {
+    content: "";              
+    position: absolute;
+    inset: 0;                  
+    background-color: rgb(255, 136, 1);
+    z-index: -1;  
+}
+
+body main form {
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    height: 100%;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 0px 0px 50px 0px;
+}
+
+body main form input {
+    height: 50px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+body main form input:focus {
+    outline: none;
+    border: solid 1px #000;
+}
+
+body main form .checkbox{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+body main form input[type="checkbox"]{
+    width: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+body main form button {
+    height: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    background: none;
+    border: solid 1px #0000005b;
+    border-radius: 5px;
+}
+
+body main section::before {
+    content: "";           
+    position: absolute;
+    inset: 0;                  
+    background-color: #ffffff;
+    z-index: -2;  
+}
+
+body main section {
+    position: relative; 
+    background-color: #ff8801;
+    height: 100%;
+    border-radius: 50px 0px 0px 0px;
+}

@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Endpint API Testes</title>
+    <title>Games</title>
+    
+    <!-- Linked CSS --> <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main>
+    <!-- Formulario de Insert nos Games -->
     <form>
         <input type="text" id="inputTitulo" placeholder="Titulo">
         <input type="text" id="inputPreco" placeholder="Preço">
@@ -16,23 +19,31 @@
         <input type="text" id="inputFaixaEtaria" placeholder="Faixa Etaria">
         <input type="text" id="inputGenero" placeholder="Gênero">
         <input type="text" id="inputDesenvolvedora" placeholder="Desenvolvedora">
-        <input type="checkbox"><label>Multiplayer</label>
+        <div class="checkbox"><input type="checkbox" id="isMultiplayer" value="true">Multiplayer</label></div>
         <button type="button" id="submitButton">Enviar Dados</button>
     </form>
-</main>
-<script>
 
-    const inputTitulo = document.getElementById("inputTitulo")
-    const inputPreco = document.getElementById("inputPreco")
-    const inputPlataforma = document.getElementById("inputPlataforma")
-    const inputAnoLancamento = document.getElementById("inputAnoLancamento")
-    const inputFaixaEtaria = document.getElementById("inputFaixaEtaria") 
-    const inputGenero = document.getElementById("inputGenero") 
+    <!-- Lista de Games Cadastrados -->
+     <section class="games-cadastrados">
+
+     </section>
+</main>
+
+<!-- Lista de Games Cadastrados -->
+<script>
+    const inputTitulo         = document.getElementById("inputTitulo")
+    const inputPreco          = document.getElementById("inputPreco")
+    const inputPlataforma     = document.getElementById("inputPlataforma")
+    const inputAnoLancamento  = document.getElementById("inputAnoLancamento")
+    const inputFaixaEtaria    = document.getElementById("inputFaixaEtaria") 
+    const inputGenero         = document.getElementById("inputGenero") 
     const inputDesenvolvedora = document.getElementById("inputDesenvolvedora") 
-    const submitButton = document.getElementById("submitButton") 
+    const multiplayer         = document.getElementById("isMultiplayer")
+    const submitButton        = document.getElementById("submitButton") 
 
     submitButton.addEventListener("click", enviarDados)
 
+    // Insert Into in DataBase
     async function enviarDados () {
         const response = await fetch("http://localhost:3000/database", {
             method : "POST",
@@ -40,31 +51,18 @@
                 'Content-Type' : 'application/json; charset=UTF-8',
             },
             body : JSON.stringify({
-                titulo : inputTitulo.value,
-                preco : inputPreco.value,
-                plataforma : inputPlataforma.value,
-                anoLancamento : inputAnoLancamento.value,
-                faixaEtaria : inputFaixaEtaria.value,
-                genero : inputGenero.value,
+                titulo         : inputTitulo.value,
+                preco          : inputPreco.value,
+                plataforma     : inputPlataforma.value,
+                anoLancamento  : inputAnoLancamento.value,
+                faixaEtaria    : inputFaixaEtaria.value,
+                genero         : inputGenero.value,
                 desenvolvedora : inputDesenvolvedora.value,
+                isMultiplayer  : multiplayer.checked
             })
         })
         .then(response => response.json())
         .then(data => console.log(data))
-    }
-
-    async function fetchAPI () {
-        document.getElementById("resposta").innerHTML = ""
-        const resposta = await fetch(document.getElementById("inputAPI").value)
-        const dados = await resposta.json()
-        console.log(dados)
-        if (Array.isArray(dados)) {
-            dados.map(game => {
-            document.getElementById("resposta").innerHTML += "<p>" + game + "</p>"
-            })
-        } else {
-            document.getElementById("resposta").innerHTML += "<p>" + dados.titulo + "</p>"
-        }
     }
 </script>
 </body>
