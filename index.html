@@ -6,11 +6,53 @@
     <title>Endpint API Testes</title>
 </head>
 <body>
-    <input id="inputAPI" type="text" placeholder="fetch API">
-    <button onclick="fetchAPI()">AQUI!!!</button>
-    <p id="resposta"></p>
-
+<main>
+    <form>
+        <input type="text" id="inputTitulo" placeholder="Titulo">
+        <input type="text" id="inputPreco" placeholder="Preço">
+        <input type="text" id="inputPlataforma"
+        placeholder="Plataforma">
+        <input type="text" id="inputAnoLancamento" placeholder="Ano de Lançamento">
+        <input type="text" id="inputFaixaEtaria" placeholder="Faixa Etaria">
+        <input type="text" id="inputGenero" placeholder="Gênero">
+        <input type="text" id="inputDesenvolvedora" placeholder="Desenvolvedora">
+        <input type="checkbox"><label>Multiplayer</label>
+        <button type="button" id="submitButton">Enviar Dados</button>
+    </form>
+</main>
 <script>
+
+    const inputTitulo = document.getElementById("inputTitulo")
+    const inputPreco = document.getElementById("inputPreco")
+    const inputPlataforma = document.getElementById("inputPlataforma")
+    const inputAnoLancamento = document.getElementById("inputAnoLancamento")
+    const inputFaixaEtaria = document.getElementById("inputFaixaEtaria") 
+    const inputGenero = document.getElementById("inputGenero") 
+    const inputDesenvolvedora = document.getElementById("inputDesenvolvedora") 
+    const submitButton = document.getElementById("submitButton") 
+
+    submitButton.addEventListener("click", enviarDados)
+
+    async function enviarDados () {
+        const response = await fetch("http://localhost:3000/database", {
+            method : "POST",
+            headers : {
+                'Content-Type' : 'application/json; charset=UTF-8',
+            },
+            body : JSON.stringify({
+                titulo : inputTitulo.value,
+                preco : inputPreco.value,
+                plataforma : inputPlataforma.value,
+                anoLancamento : inputAnoLancamento.value,
+                faixaEtaria : inputFaixaEtaria.value,
+                genero : inputGenero.value,
+                desenvolvedora : inputDesenvolvedora.value,
+            })
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+    }
+
     async function fetchAPI () {
         document.getElementById("resposta").innerHTML = ""
         const resposta = await fetch(document.getElementById("inputAPI").value)

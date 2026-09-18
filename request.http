@@ -22,5 +22,5 @@ POST http://localhost:3000/database
 Content-Type: application/json
 
 {
-    "nome": "Davi Siqueira"
+    "titulo": "Davi Siqueira"
 }

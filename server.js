@@ -10,11 +10,19 @@ await server.register(cors, {
 })
 
 server.post("/database", async (request, reply) => {
-    const { nome } = request.body
+    const { titulo, preco, plataforma, anoLancamento, faixaEtaria, genero, desenvolvedora } = request.body
 
     const { data, error } = await supabase
-    .from("usuario")
-    .insert({nm_usuario: nome})
+    .from("JOGOS")
+    .insert({
+        nm_titulo:         titulo,
+        vl_preco:          preco,
+        nm_plataforma:     plataforma,
+        dt_ano_lancamento: anoLancamento,
+        nm_faixa_etaria:   faixaEtaria,
+        nm_genero:         genero,
+        nm_desenvolvedora: desenvolvedora
+    })
     .select()
 
     if(error)
@@ -24,16 +32,16 @@ server.post("/database", async (request, reply) => {
     
     return reply
     .status(201)
-    .send({ status: "Usuario Criado", dados: data })
+    .send({ status: "Jogo Criado", dados: data })
 })
 
-server.get("/database", async (request, reply) => {
-    const { data, error } = await supabase.from("usuario").select("*")
-    if(error)
-        return reply.status(500).send({status: "erro", detalhe: error.message})
+// server.get("/database", async (request, reply) => {
+//     const { data, error } = await supabase.from("usuario").select("*")
+//     if(error)
+//         return reply.status(500).send({status: "erro", detalhe: error.message})
 
-    return {status: "conectado", dados: data}
-})
+//     return {status: "conectado", dados: data}
+// })
 
 server.get("/jogos", (request, reply) => {
     let resposta
