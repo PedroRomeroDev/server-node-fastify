@@ -15,3 +15,12 @@ GET http://localhost:3000/jogos?titulo=Valorant
 
 # Rota Para Buscar Determinado Atributo de um Jogo
 GET http://localhost:3000/jogos/Valorant?atributo=genero
+
+###
+
+POST http://localhost:3000/database
+Content-Type: application/json
+
+{
+    "nome": "Davi Siqueira"
+}

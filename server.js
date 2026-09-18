@@ -1,11 +1,38 @@
-import fastify from 'fastify'
-import cors from "@fastify/cors"
-import games from "./games.json" with {type: 'json'}
+import fastify   from 'fastify'
+import { supabase }  from './database.js'
+import cors      from "@fastify/cors"
+import games     from "./games.json" with {type: 'json'}
 
 const server = fastify()
 
 await server.register(cors, {
     origin: "http://127.0.0.1:5500"
+})
+
+server.post("/database", async (request, reply) => {
+    const { nome } = request.body
+
+    const { data, error } = await supabase
+    .from("usuario")
+    .insert({nm_usuario: nome})
+    .select()
+
+    if(error)
+        return reply
+        .status(500)
+        .send({ status: "error", detalhe: error.message })
+    
+    return reply
+    .status(201)
+    .send({ status: "Usuario Criado", dados: data })
+})
+
+server.get("/database", async (request, reply) => {
+    const { data, error } = await supabase.from("usuario").select("*")
+    if(error)
+        return reply.status(500).send({status: "erro", detalhe: error.message})
+
+    return {status: "conectado", dados: data}
 })
 
 server.get("/jogos", (request, reply) => {
