@@ -31,8 +31,10 @@
 
 <!-- Lista de Games Cadastrados -->
 <script>
+
     const form = document.getElementById("form")
     const inputs = form.querySelectorAll("input")
+
     const inputTitulo         = document.getElementById("inputTitulo")
     const inputPreco          = document.getElementById("inputPreco")
     const inputPlataforma     = document.getElementById("inputPlataforma")
@@ -47,6 +49,7 @@
 
     // Insert Into in DataBase
     async function enviarDados () {
+        if (!form.reportValidity()) return 
         const response = await fetch("http://localhost:3000/database", {
             method : "POST",
             headers : {
@@ -64,14 +67,20 @@
             })
         })
         .then(response => response.json())
-        .then(data => console.log(data), clearFields())
+        .then(data => {
+            console.log(data)
+            clearFields()
+        })
+        
     }
 
+    // Function to Clear Fields
     function clearFields () {
         inputs.forEach(input => {
                 input.value = ""
         });
     }
+
 </script>
 </body>
 </html>
