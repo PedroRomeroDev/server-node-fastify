@@ -10,16 +10,16 @@
 <body>
 <main>
     <!-- Formulario de Insert nos Games -->
-    <form>
-        <input type="text" id="inputTitulo" placeholder="Titulo">
-        <input type="text" id="inputPreco" placeholder="Preço">
+    <form class="form" id="form">
+        <input type="text" id="inputTitulo" placeholder="Titulo" required>
+        <input type="text" id="inputPreco" placeholder="Preço"   required>
         <input type="text" id="inputPlataforma"
-        placeholder="Plataforma">
-        <input type="text" id="inputAnoLancamento" placeholder="Ano de Lançamento">
-        <input type="text" id="inputFaixaEtaria" placeholder="Faixa Etaria">
-        <input type="text" id="inputGenero" placeholder="Gênero">
-        <input type="text" id="inputDesenvolvedora" placeholder="Desenvolvedora">
-        <div class="checkbox"><input type="checkbox" id="isMultiplayer" value="true">Multiplayer</label></div>
+        placeholder="Plataforma" required>
+        <input type="text" id="inputAnoLancamento" placeholder="Ano de Lançamento" min="1970" max="2026" required>
+        <input type="text" id="inputFaixaEtaria" placeholder="Faixa Etaria" required>
+        <input type="text" id="inputGenero" placeholder="Gênero" required>
+        <input type="text" id="inputDesenvolvedora" placeholder="Desenvolvedora" required>
+        <div class="checkbox"><input type="checkbox" id="isMultiplayer" value="true">Multiplayer</div>
         <button type="button" id="submitButton">Enviar Dados</button>
     </form>
 
@@ -31,6 +31,8 @@
 
 <!-- Lista de Games Cadastrados -->
 <script>
+    const form = document.getElementById("form")
+    const inputs = form.querySelectorAll("input")
     const inputTitulo         = document.getElementById("inputTitulo")
     const inputPreco          = document.getElementById("inputPreco")
     const inputPlataforma     = document.getElementById("inputPlataforma")
@@ -62,7 +64,13 @@
             })
         })
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => console.log(data), clearFields())
+    }
+
+    function clearFields () {
+        inputs.forEach(input => {
+                input.value = ""
+        });
     }
 </script>
 </body>
